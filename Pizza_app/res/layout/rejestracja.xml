@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+android:clickable="true" 
+    android:focusableInTouchMode="true" 
+>
+
+    <EditText
+        android:id="@+id/emailRejestracja"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:inputType="textPersonName" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView_adresimie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adres E-mail" />
+
+   
+
+    <EditText
+        android:id="@+id/hasloRejestracja"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/textView_adresMiasto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hasło" />
+
+    <EditText
+        android:id="@+id/hasloPowtorzRejestracja"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+        <TextView
+        android:id="@+id/textView_adresUlica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Powtórz hasło" />
+    <Button
+        android:id="@+id/buttonRejestruj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rejestruj" />
+
+    <Button
+        android:id="@+id/buttonRejestrujWroc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Wróć" />
+
+</LinearLayout>

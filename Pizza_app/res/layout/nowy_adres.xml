@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:clickable="true" 
+    android:focusableInTouchMode="true" 
+    android:id="@+id/nowy_adres">
+
+    <EditText
+        android:id="@+id/adres_editImie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/dodajT_adresimie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Imię" />
+
+    <EditText
+        android:id="@+id/adres_editNaziwsko"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/dodajT_adresNazwisko"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nazwisko" />
+
+    <EditText
+        android:id="@+id/adres_editMiasto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/textViewT_adresMiasto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Miasto" />
+
+    <EditText
+        android:id="@+id/adres_editUlica"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/textViewT_adresUlica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ulica" />
+
+    <EditText
+        android:id="@+id/adres_editTelefon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone" />
+
+    <TextView
+        android:id="@+id/textViewT_adresTelefon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telefon" />
+
+    <Button
+        android:id="@+id/zapisz_adres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zapisz" />
+
+    <Button
+        android:id="@+id/wroc_adres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wróć" />
+
+</LinearLayout>

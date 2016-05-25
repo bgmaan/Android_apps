@@ -1,0 +1,49 @@
+ <RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent">
+
+  
+    <TextView
+        android:id="@+id/produkt_nazwazam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/produkt_opiszam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/produkt_nazwazam"
+        android:maxWidth="200dp"
+        android:text="Medium Textaaaaaaaaaaaaaaaaaaa"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/produkt_usunzam"
+        android:layout_width="78dp"
+        android:layout_height="64dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@id/produkt_opiszam"
+        android:maxHeight="64dp"
+        android:maxWidth="64dp"
+        android:minHeight="12dp"
+        android:minWidth="12dp"
+        android:text="USUŃ"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/produkt_cenazam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/produkt_usunzam"
+        android:layout_below="@+id/produkt_usunzam"
+        android:layout_marginTop="20dp"
+        android:text="Small Text"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+</RelativeLayout>
+  

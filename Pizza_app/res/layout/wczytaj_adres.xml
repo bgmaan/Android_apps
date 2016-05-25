@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:id="@+id/wczytaj_adres">
+
+    <TextView
+        android:id="@+id/adres_Imie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/wczadres_Imie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Imie" />
+
+    <TextView
+        android:id="@+id/adres_nazwisko"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nazwisko" />
+
+    <TextView
+        android:id="@+id/adres_miasto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Miasto" />
+
+    <TextView
+        android:id="@+id/adres_ulica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ulica" />
+
+    <TextView
+        android:id="@+id/adres_telefon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telefon" />
+
+    <Button
+        android:id="@+id/button_adres_edytuj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edytuj" />
+
+    <Button
+        android:id="@+id/button_adres_wroc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wróć" />
+
+</LinearLayout>

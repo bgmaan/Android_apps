@@ -1,0 +1,21 @@
+# view AndroidManifest.xml #generated:28
+-keep class com.example.pizza.GlowneMenu { <init>(...); }
+
+# view AndroidManifest.xml #generated:19
+-keep class com.example.pizza.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:36
+-keep class com.example.pizza.MojAdres { <init>(...); }
+
+# view AndroidManifest.xml #generated:40
+-keep class com.example.pizza.NoweZamowienie { <init>(...); }
+
+# view AndroidManifest.xml #generated:32
+-keep class com.example.pizza.Rejestracja { <init>(...); }
+
+# view AndroidManifest.xml #generated:44
+-keep class com.example.pizza.TwojeZamowienie { <init>(...); }
+
+# view AndroidManifest.xml #generated:48
+-keep class com.example.pizza.ZamHistoria { <init>(...); }
+

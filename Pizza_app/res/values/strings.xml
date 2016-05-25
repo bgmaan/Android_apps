@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Pizza</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_glowne_menu">Głowne Menu</string>
+      <string name="title_activity_rejestracja">Rejestracja</string>
+    
+     <string name="Twojezam">Twoje zamowienie</string>
+    <string name="Zam_hist">Historia</string>
+    <string name="Now_zam">Nowe zamówienie</string>
+    <string name="Moj_adres">Mój adres</string>
+</resources>

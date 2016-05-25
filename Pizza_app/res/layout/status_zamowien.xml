@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/hist_zamo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:text="Twoje zamówienia"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <Button
+        android:id="@+id/hits_odswierz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+      
+        android:text="Odśwież" />
+    <Button
+        android:id="@+id/hits_wroc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+         
+        android:layout_alignParentLeft="true"
+       
+        android:text="Wroc" />
+
+    
+
+    <ListView
+        android:id="@+id/hist_lista"
+            android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentLeft="true"
+        android:layout_above="@id/hits_odswierz"
+        android:layout_below="@id/hist_zamo" >
+
+    </ListView>
+</RelativeLayout>

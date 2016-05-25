@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header_zloz_zamowienie"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:gravity="right" >
+
+    <Button
+        android:id="@+id/button_zamwyslij"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="false"
+        android:text="Wyslij" />
+    
+    <Button
+        android:id="@+id/button_zammenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Menu" />
+    
+    
+    <ListView
+        android:id="@+id/zam_lista"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/button_zamwyslij"
+        android:layout_below="@id/button_zammenu" >
+
+    </ListView>
+
+    
+
+
+    <Button
+        android:id="@+id/button_zamwroc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="Wróć" />
+
+    <TextView
+        android:id="@+id/zam_cena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button_zamwyslij"
+        android:layout_alignBottom="@+id/button_zamwyslij"
+        android:layout_alignRight="@+id/button_zamwroc"
+        android:text="TextView" />
+
+    
+
+</RelativeLayout>
