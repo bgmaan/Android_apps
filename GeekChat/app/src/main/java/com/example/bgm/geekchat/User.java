@@ -9,6 +9,7 @@ public class User {
     private String email;
     private int friendsNumber;
     private String imgSrc;
+    private int counter;
 
     public User(String email, String name, int friendsNumber, String imgSrc) {
         this.email = email;
