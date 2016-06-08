@@ -16,7 +16,9 @@
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
-        <activity android:name=".Users" />
+        <activity android:name=".Users">
+
+        </activity>
         <activity android:name=".ChatActivity" />
         <activity android:name=".SignUp_Activity"> </activity>
         <activity android:name=".Login_activity">
@@ -28,6 +30,11 @@
         </activity>
         <activity android:name=".YourProfile" />
         <activity android:name=".WriteDataSignUp">
+
+
+
+        </activity>
+        <activity android:name=".Profile_Activity">
 
 
 

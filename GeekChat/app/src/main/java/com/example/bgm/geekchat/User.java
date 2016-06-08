@@ -9,13 +9,23 @@ public class User {
     private String email;
     private int friendsNumber;
     private String imgSrc;
+    private String userId;
     private int counter;
 
-    public User(String email, String name, int friendsNumber, String imgSrc) {
+    public User(String email, String name, int friendsNumber, String imgSrc,String userId) {
         this.email = email;
         this.name = name;
         this.friendsNumber = friendsNumber;
         this.imgSrc = imgSrc;
+        this.userId = userId;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getName() {

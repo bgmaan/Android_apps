@@ -79,22 +79,19 @@ public class Login_activity extends AppCompatActivity {
                             MyConstants.idUser = authData.getUid();
                             Firebase ref = new Firebase(MyConstants.FIREBASE_URL+"/users/"+MyConstants.idUser+"/");
 
-                            ref.addValueEventListener(new ValueEventListener() {
+                            ref.addListenerForSingleValueEvent(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(DataSnapshot snapshot) {
 
                                     Log.d(""+snapshot.hasChild("name"),"CzyJestChild");
-                                    if(snapshot.hasChild("Name")) {
+                                    if(snapshot.hasChild("name")) {
                                         Intent intent = new Intent(Login_activity.this, MainActivity.class);
-                                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                         startActivity(intent);
                                     }
                                     else {
-                                        Intent intent = new Intent(Login_activity.this, WriteDataSignUp.class);
 
-                                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                        Login_activity.this.finish();
+                                        Intent intent = new Intent(Login_activity.this, WriteDataSignUp.class);
                                         startActivity(intent);
                                     }
                                 }

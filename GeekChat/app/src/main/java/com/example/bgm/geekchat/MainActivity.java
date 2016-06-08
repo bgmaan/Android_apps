@@ -33,7 +33,9 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     ListView friendsListView;
+    ArrayList<User> friends;
     private Firebase mRef;
+    private  UsersAdapter usrAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +43,8 @@ public class MainActivity extends AppCompatActivity {
         setTitle(R.string.my_friends);
         setContentView(R.layout.activity_main);
         Firebase.setAndroidContext(this);
-        mRef = new Firebase(MyConstants.FIREBASE_URL+"/users/"+MyConstants.idUser+"/friends/");
+        friends = new ArrayList<>();
+        mRef = new Firebase(MyConstants.FIREBASE_URL+"/users/"+MyConstants.idUser+"/");
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.fab);
@@ -68,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         friendsListView = (ListView)findViewById(R.id.myFriendsList);
-        final UsersAdapter usrAdapter = new UsersAdapter(this,R.layout.item_user,getFriends());
+        usrAdapter = new UsersAdapter(this,R.layout.item_user,getFriends());
         friendsListView.setAdapter(usrAdapter);
         friendsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -82,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private ArrayList<User> getFriends() {
-        ArrayList<User> users = new ArrayList<>();
+         friends.clear();
 
         //pobierz wszystkich znajomych
 
@@ -90,12 +93,63 @@ public class MainActivity extends AppCompatActivity {
 
         //jezeli nie dodaj
 
+        mRef.child("friends").addListenerForSingleValueEvent(new ValueEventListener() {
+
+            @Override
+            public void onDataChange(DataSnapshot snapshot) {
 
 
 
 
-        return users;
+                    for (DataSnapshot ssnapshot : snapshot.getChildren()) {
+
+
+                      Firebase  ref = new Firebase(MyConstants.FIREBASE_URL+"/users/"+ssnapshot.getKey().toString()+"/");
+
+                        ref.addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(DataSnapshot snapshot) {
+                                String friendCount;
+                                System.out.println(snapshot.child("email").getValue().toString());
+                                if(snapshot.child("friends").exists())friendCount=snapshot.child("friends").getValue().toString();
+                                else friendCount="0";
+                                friends.add(new User(snapshot.child("email").getValue().toString(), snapshot.child("name").getValue().toString(), Integer.parseInt(friendCount),
+                                        snapshot.child("avatarId").getValue().toString(),snapshot.getKey().toString()));
+                                System.out.println(friends.size());
+                                usrAdapter.notifyDataSetChanged();
+                            }
+
+
+                        @Override
+                        public void onCancelled(FirebaseError firebaseError) {
+                            System.out.println("The read failed: " + firebaseError.getMessage());
+                        }
+                    });
+
+                    }
+
+
+
+
+
+
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+                System.out.println("The read failed: " + firebaseError.getMessage());
+            }
+        });
+
+
+
+        return friends;
     }
+    @Override
+    public void onResume(){
+        super.onResume();
+        getFriends();
 
+    }
 
 }

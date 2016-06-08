@@ -41,7 +41,7 @@ public class ChatActivity extends AppCompatActivity {
         sendButton = (ImageButton)findViewById(R.id.sendButton);
 
 
-         user = new User("vzir@sd","Bartek",2,Faker.Url.avatar()
+         user = new User("vzir@sd","Bartek",2,Faker.Url.avatar(),"0"
 
          );
          messageAdapter = new MessageAdapter(this,R.layout.item_message,Messages);

@@ -1,6 +1,7 @@
 package com.example.bgm.geekchat;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +16,8 @@ import com.firebase.client.FirebaseError;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import io.kimo.lib.faker.Faker;
 
 public class SignUp_Activity extends AppCompatActivity {
 
@@ -32,7 +35,7 @@ public class SignUp_Activity extends AppCompatActivity {
         passwordEditText = (EditText)findViewById(R.id.passwordField);
         emailEditText = (EditText)findViewById(R.id.emailField);
         signUpButton = (Button)findViewById(R.id.signupButton);
-
+        final Context con = this;
          ref = new Firebase(MyConstants.FIREBASE_URL);
 
         signUpButton.setOnClickListener(new View.OnClickListener() {
@@ -58,6 +61,15 @@ public class SignUp_Activity extends AppCompatActivity {
                                      AlertDialog.Builder builder = new AlertDialog.Builder(SignUp_Activity.this);
                                      String userId = result.get("uid").toString();
                                      ref.child("users").child(userId).child("email").setValue(email);
+                                     int i =0;
+                                     while(i<=100) {
+                                         String email =Faker.with(con).Internet.email();
+                                         ref.child("users").child(""+i).child("email").setValue(email);
+                                         ref.child("users").child(""+i).child("name").setValue(Faker.with(con).Name.firstName());
+                                         ref.child("users").child(""+i).child("avatarId").setValue(Faker.with(con).Url.avatar());
+                                         i++;
+                                     }
+
                                      builder.setMessage(R.string.signup_success)
                                              .setPositiveButton(R.string.login_button_label, new DialogInterface.OnClickListener() {
                                                  @Override
