@@ -7,12 +7,12 @@ public class User {
 
     private String name;
     private String email;
-    private int friendsNumber;
+    private String friendsNumber;
     private String imgSrc;
     private String userId;
-    private int counter;
+    private String counter;
 
-    public User(String email, String name, int friendsNumber, String imgSrc,String userId) {
+    public User(String email, String name, String friendsNumber, String imgSrc,String userId) {
         this.email = email;
         this.name = name;
         this.friendsNumber = friendsNumber;
@@ -52,11 +52,11 @@ public class User {
         this.imgSrc = imgSrc;
     }
 
-    public int getFriendsNumber() {
+    public String getFriendsNumber() {
         return friendsNumber;
     }
 
-    public void setFriendsNumber(int friendsNumber) {
+    public void setFriendsNumber(String friendsNumber) {
         this.friendsNumber = friendsNumber;
     }
 }

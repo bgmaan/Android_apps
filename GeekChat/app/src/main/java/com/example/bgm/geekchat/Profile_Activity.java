@@ -59,10 +59,11 @@ public class Profile_Activity extends AppCompatActivity {
                  addFriend();
             }
         });
+        if(MainActivity.ifExist(userId)) addButton.setEnabled(false);
     }
     private void addFriend() {
-
-        mRef.child(MyConstants.idUser).child("friends").child(userId).setValue("");
+        mRef.child(userId).child("requests").child(MyConstants.idUser).setValue("1");
 
     }
+
 }

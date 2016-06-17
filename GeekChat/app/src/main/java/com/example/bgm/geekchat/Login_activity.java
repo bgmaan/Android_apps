@@ -85,6 +85,9 @@ public class Login_activity extends AppCompatActivity {
 
                                     Log.d(""+snapshot.hasChild("name"),"CzyJestChild");
                                     if(snapshot.hasChild("name")) {
+                                        MyConstants.setAvatarId(snapshot.child("avatarId").getValue().toString());
+                                        MyConstants.setName(snapshot.child("name").getValue().toString());
+                                        MyConstants.setEmail(snapshot.child("email").getValue().toString());
                                         Intent intent = new Intent(Login_activity.this, MainActivity.class);
                                         startActivity(intent);
                                     }

@@ -47,7 +47,7 @@ public class Users extends AppCompatActivity   {
         counter=0;
         usersListView=(ListView)findViewById(R.id.usersList);
         searchBar = (AutoCompleteTextView) findViewById(R.id.searchFriendsBar);
-         adapterSearchBar = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,userNames);
+        adapterSearchBar = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,userNames);
         searchBar.setAdapter(adapterSearchBar);
         usersAdapter = new UsersAdapter(this,R.layout.item_user,getUsers(""));
         usersListView.setAdapter(usersAdapter);
@@ -137,9 +137,9 @@ public class Users extends AppCompatActivity   {
                         int size=users.size();
                         if(size==0) {
                             String friendCount;
-                            if(snapshot.child("friends").exists())friendCount=snapshot.child("friends").getValue().toString();
+                            if(snapshot.child("friends").exists()){friendCount=Long.toString(snapshot.child("friends").getChildrenCount());}
                             else friendCount="0";
-                            users.add(new User(snapshot.child("email").getValue().toString(), snapshot.child("name").getValue().toString(), Integer.parseInt(friendCount),
+                            users.add(new User(snapshot.child("email").getValue().toString(), snapshot.child("name").getValue().toString(), friendCount,
                                     snapshot.child("avatarId").getValue().toString(),snapshot.getKey().toString()));
                             usersAdapter.notifyDataSetChanged();
                             userNames.add(snapshot.child("name").getValue().toString());
@@ -154,9 +154,9 @@ public class Users extends AppCompatActivity   {
 
                             else {
                                 String friendCount;
-                                if(snapshot.child("friends").exists())friendCount=snapshot.child("friends").getValue().toString();
+                                if(snapshot.child("friends").exists()){friendCount=Long.toString(snapshot.child("friends").getChildrenCount());}
                                 else friendCount="0";
-                                users.add(new User(snapshot.child("email").getValue().toString(), snapshot.child("name").getValue().toString(), Integer.parseInt(friendCount),
+                                users.add(new User(snapshot.child("email").getValue().toString(), snapshot.child("name").getValue().toString(), friendCount,
                                         snapshot.child("avatarId").getValue().toString(),snapshot.getKey().toString()));
                                 usersAdapter.notifyDataSetChanged();
                                 userNames.add(snapshot.child("name").getValue().toString());
@@ -207,9 +207,9 @@ public class Users extends AppCompatActivity   {
                                                              int size=users.size();
                                                              if(size==0) {
                                                                  String friendCount;
-                                                                 if(snapshot.child("friends").exists())friendCount=snapshot.child("friends").getValue().toString();
-                                                                 else friendCount="0";
-                                                                 users.add(new User(snapshot.child("email").getValue().toString(), snapshot.child("name").getValue().toString(), Integer.parseInt(friendCount),
+                                                                 if(snapshot.child("friends").exists()){friendCount=Long.toString(snapshot.child("friends").getChildrenCount());}
+                                                                 else {friendCount="0";}
+                                                                 users.add(new User(snapshot.child("email").getValue().toString(), snapshot.child("name").getValue().toString(), friendCount,
                                                                          snapshot.child("avatarId").getValue().toString(),snapshot.getKey().toString()));
                                                                  usersAdapter.notifyDataSetChanged();
                                                                  userNames.add(snapshot.child("name").getValue().toString());
@@ -224,9 +224,9 @@ public class Users extends AppCompatActivity   {
 
                                                                 else {
                                                                  String friendCount;
-                                                                 if(snapshot.child("friends").exists())friendCount=snapshot.child("friends").getValue().toString();
+                                                                 if(snapshot.child("friends").exists()){friendCount=Long.toString(snapshot.child("friends").getChildrenCount());}
                                                                  else friendCount="0";
-                                                                 users.add(new User(snapshot.child("email").getValue().toString(), snapshot.child("name").getValue().toString(), Integer.parseInt(friendCount),
+                                                                 users.add(new User(snapshot.child("email").getValue().toString(), snapshot.child("name").getValue().toString(), friendCount,
                                                                          snapshot.child("avatarId").getValue().toString(),snapshot.getKey().toString()));
                                                                  usersAdapter.notifyDataSetChanged();
                                                                  userNames.add(snapshot.child("name").getValue().toString());
