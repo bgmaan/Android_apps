@@ -41,14 +41,16 @@
     </ListView>
 
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/youProfile"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:layout_gravity="top|end"
+
+    <Button
+        android:layout_width="32dp"
+        android:layout_height="32dp"
         android:src="@drawable/ic_reorder_black_18dp"
-        app:backgroundTint="@android:color/transparent"
-        android:background="@android:color/transparent"
+        android:background="@drawable/ic_face_white_18dp"
+        android:layout_gravity="top|right"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/requests_button"
         />
 
     <android.support.design.widget.FloatingActionButton

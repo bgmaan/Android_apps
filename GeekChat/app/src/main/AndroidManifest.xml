@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.bgm.geekchat">
+    package="com.example.bgm.geekchat" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -9,19 +9,18 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar">
-
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-        <activity android:name=".Users">
-
+        <activity android:name=".Users" >
         </activity>
         <activity android:name=".ChatActivity" />
-        <activity android:name=".SignUp_Activity"> </activity>
-        <activity android:name=".Login_activity">
+        <activity android:name=".SignUp_Activity" >
+        </activity>
+        <activity android:name=".Login_activity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,15 +28,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".YourProfile" />
-        <activity android:name=".WriteDataSignUp">
-
-
-
+        <activity android:name=".WriteDataSignUp" >
         </activity>
-        <activity android:name=".Profile_Activity">
-
-
-
+        <activity android:name=".Profile_Activity" >
+        </activity>
+        <activity android:name=".Requests" >
+        </activity>
+        <activity android:name=".Request_Profile" >
         </activity>
     </application>
 
